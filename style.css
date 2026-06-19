@@ -1,0 +1,162 @@
+body{
+margin:0;
+font-family:Arial;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+background:linear-gradient(
+135deg,
+#00c6ff,
+#0072ff,
+#ff8c00,
+#ff3cac,
+#784ba0
+);
+
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* =========================
+   🔵 LOGIN BOX
+   ========================= */
+.box{
+width:380px;
+background:rgba(0,0,0,0.65);
+padding:30px;
+border-radius:18px;
+box-shadow:0 0 25px rgba(0,255,255,0.5);
+}
+
+/* INPUT */
+input{
+width:90%;
+padding:12px;
+margin:8px;
+border:none;
+border-radius:8px;
+outline:none;
+}
+
+/* BUTTON BASE */
+button{
+padding:12px 22px;
+background:linear-gradient(90deg,#00c6ff,#ff8c00,#ff3cac);
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+color:white;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+/* =========================
+   🔥 DASHBOARD SECTION
+   ========================= */
+
+/* GRID */
+.menu{
+display:grid;
+grid-template-columns:repeat(2, 1fr);
+gap:12px;
+margin-top:15px;
+width:100%;
+}
+
+/* BIG BUTTON BASE */
+.bigbtn{
+width:100%;
+padding:26px;
+font-size:16px;
+font-weight:bold;
+border:none;
+border-radius:15px;
+cursor:pointer;
+color:white;
+transition:0.3s;
+text-align:center;
+}
+
+/* ✅ FIXED BUTTON COLORS (WORKING NOW) */
+.menu a:nth-of-type(1) .bigbtn{
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+}
+
+.menu a:nth-of-type(2) .bigbtn{
+background:linear-gradient(90deg,#ff8c00,#ff3cac);
+}
+
+.menu a:nth-of-type(3) .bigbtn{
+background:linear-gradient(90deg,#7a00ff,#00c6ff);
+}
+
+.menu a:nth-of-type(4) .bigbtn{
+background:linear-gradient(90deg,#00c853,#ff8c00);
+}
+
+/* 🔥 APPROVE / REJECT (FORCE OVERRIDE FIX) */
+button.bigbtn.approve{
+background:linear-gradient(90deg,#4caf50,#1b5e20) !important;
+}
+
+button.bigbtn.reject{
+background:linear-gradient(90deg,#f44336,#b71c1c) !important;
+}
+
+/* HOVER */
+.bigbtn:hover{
+transform:scale(1.07);
+box-shadow:0 0 18px rgba(255,255,255,0.25);
+}
+
+/* STATUS */
+.status{
+display:flex;
+justify-content:space-between;
+gap:10px;
+margin:15px 0;
+flex-wrap:wrap;
+}
+
+.status div{
+flex:1;
+min-width:100px;
+background:rgba(255,255,255,0.1);
+padding:12px;
+border-radius:10px;
+font-size:13px;
+}
+
+/* INFO */
+.info{
+margin-top:15px;
+font-size:13px;
+opacity:0.8;
+line-height:1.4;
+text-align:center;
+}
+
+/* LOGOUT */
+.logout{
+padding:12px 20px;
+background:red;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+margin-top:10px;
+}

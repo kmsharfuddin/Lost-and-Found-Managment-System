@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Item</title>
+</head>
+<body>
+
+    <h2>Report Lost / Found Item</h2>
+
+    <form action="save.php" method="POST" enctype="multipart/form-data">
+
+        <!-- ১. কি ধরণের রিপোর্ট -->
+        <label>Type:</label><br>
+        <input type="radio" name="report_type" value="Lost" required> Lost
+        <input type="radio" name="report_type" value="Found"> Found
+        <br><br>
+
+        <!-- ২. জিনিসের নাম -->
+        <input type="text" name="title" placeholder="Item Name (e.g. Black Wallet)" required><br><br>
+
+        <!-- ৩. ক্যাটাগরি -->
+        <select name="category" required>
+            <option value="">Select Category</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Documents">Documents (ID/Passport)</option>
+            <option value="Wallet/Bag">Wallet/Bag</option>
+            <option value="Pets">Pets</option>
+            <option value="Others">Others</option>
+        </select><br><br>
+
+        <!-- ৪. তারিখ ও সময় -->
+        <label>Date and Time:</label><br>
+        <input type="datetime-local" name="occurrence_time" required><br><br>
+
+        <!-- ৫. স্থান বা এলাকা -->
+        <input type="text" name="location" placeholder="Location (Where did it happen?)" required><br><br>
+
+        <!-- ৬. বিস্তারিত বর্ণনা -->
+        <textarea name="description" placeholder="Description (Color, Brand, Special marks)" rows="4" required></textarea><br><br>
+
+        <!-- ৭. ছবি আপলোড -->
+        <label>Upload Image:</label><br>
+        <input type="file" name="item_image" accept="image/*"><br><br>
+
+        <hr>
+        <h3>Contact Information</h3>
+
+        <!-- ৮. কন্টাক্ট ডিটেইলস -->
+        <input type="text" name="contact_name" placeholder="Your Name" required><br><br>
+        <input type="tel" name="phone" placeholder="Phone Number" required><br><br>
+        <input type="email" name="email" placeholder="Email (Optional)"><br><br>
+
+        <!-- ৯. সাবমিট বাটন -->
+        <button type="submit">Submit Report</button>
+
+    </form>
+
+</body>
+</html>

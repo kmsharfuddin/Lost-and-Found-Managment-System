@@ -1,0 +1,168 @@
+
+$_SESSION['admin']=true;
+
+/* SAVE COOKIE */
+setcookie("admin_user", $_POST['username'], time()+86400);
+setcookie("admin_pass", $_POST['password'], time()+86400);
+
+}else{
+$error = "Wrong Login";
+}
+}
+/* ================= LOGOUT ================= */
+if(isset($_GET['logout'])){
+session_destroy();
+setcookie("admin_user","",time()-3600);
+setcookie("admin_pass","",time()-3600);
+header("Location:admin.php");
+exit();
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+</head>
+
+<body>
+
+<?php if(!isset($_SESSION['admin'])){ ?>
+
+<!-- ================= LOGIN ================= -->
+<h2>Admin Login</h2>
+
+<?php if(isset($error)) echo "<p style='color:red'>$error</p>"; ?>
+
+<form method="POST">
+
+<input type="text" name="username"
+value="<?php echo $cookie_user ? $cookie_user : 'sayedjr113488'; ?>"
+placeholder="Username" required><br><br>
+
+<input type="password" name="password"
+value="<?php echo $cookie_pass ? $cookie_pass : 'jonayedjr113488'; ?>"
+placeholder="Password" required><br><br>
+
+<button name="login">Login</button>
+
+</form>
+
+<?php } else { ?>
+
+<!-- ================= DASHBOARD ================= -->
+<h2>📋 Admin Panel</h2>
+
+<a href="?logout=1">Logout</a>
+
+<hr>
+
+<?php
+$file="data/reports.txt";
+
+if(file_exists($file)){
+
+$lines = file($file);
+
+/* ================= AUTO PAIR MATCH SYSTEM ================= */
+
+echo "<h3>🔥 Auto Matched Items</h3>";
+
+$used = array();
+
+for($i=0;$i<count($lines);$i++){
+
+if(in_array($i,$used)) continue;
+
+
+$bestJ = -1;
+$bestScore = 0;
+$bestB = null;
+
+/* find best match */
+for($j=0;$j<count($lines);$j++){
+
+if($i == $j) continue;
+if(in_array($j,$used)) continue;
+
+
+$score = 0;
+
+/* Lost vs Found */
+if(trim($a[0]) != trim($b[0])) $score += 40;
+
+/* Title match */
+if(strtolower(trim($a[1])) == strtolower(trim($b[1]))) $score += 30;
+
+/* Category */
+if(isset($a[2]) && isset($b[2]) && trim($a[2]) == trim($b[2])) $score += 20;
+
+/* Location */
+if(isset($a[3]) && isset($b[3]) && trim($a[3]) == trim($b[3])) $score += 10;
+
+/* best match select */
+if($score > $bestScore){
+$bestScore = $score;
+$bestJ = $j;
+$bestB = $b;
+}
+}
+
+/* SHOW ONLY MATCHED PAIR */
+if($bestScore >= 60 && $bestJ != -1){
+
+$used[] = $i;
+$used[] = $bestJ;
+
+echo "<div style='border:2px solid green;padding:15px;margin:10px;background:#eaffea;border-radius:10px'>";
+
+echo "🟡 <b>LOST ITEM</b><br>";
+echo "Type: ".$a[0]."<br>";
+echo "Title: ".$a[1]."<br><br>";
+
+echo "🟢 <b>FOUND ITEM</b><br>";
+echo "Type: ".$bestB[0]."<br>";
+echo "Title: ".$bestB[1]."<br><br>";
+
+echo "📊 <b>Match Score:</b> $bestScore%<br><br>";
+
+echo "✔ <b style='color:green'>AUTO MATCH FOUND</b><br><br>";
+
+echo "<a href='cancel.php?id=$i'>❌ Reject</a>";
+
+echo "</div>";
+}
+}
+
+/* ================= ALL REPORTS ================= */
+
+echo "<hr><h3>📄 All Reports</h3>";
+
+foreach($lines as $index=>$line){
+
+
+echo "<div style='border:1px solid #ccc;padding:10px;margin:10px'>";
+
+echo "Type: ".$data[0]."<br>";
+echo "Title: ".$data[1]."<br>";
+echo "Description: ".$data[2]."<br>";
+echo "Status: ".$data[3]."<br><br>";
+
+if(trim($data[3])=="Pending"){
+echo "<a href='cancel.php?id=$index'>Cancel</a>";
+}
+
+echo "</div>";
+}
+}
+?>
+
+<?php } ?>
+
+</body>
+Lost|Mobile|Electronics|2026-05-18T19:00|Noapara,Rouzan|Black,Iphone 17pro|Sayed|016********|sayedjr113488@gmail.com||Pending
+Found|Mobole|Electronics|2026-05-18T19:20|Noapara,Rouzan|Black,Iphone17 pro|Shoiab|018********|shoiab2211@gmail.com||Pending
+Lost|Perfume|Others|2026-05-18T21:10|City gate|Black and sikver,Rayhaan|Khaled|018********|khaled98@gmail.com||Pending
+Found|Wallet|Wallet/Bag|2026-05-17T20:30|Hali sahar|Black,Louis Vuitton|Sajid muntasir|018********|sajid765@gmail.com||Pending
+Found|Life partner|Others|2025-10-11T20:00|Gec|Too dark|Tahon|018********|Tahon778@gmail.com||Pending
+Lost|Heart|Others|2026-05-10T03:00|Kulshi|Red|Ashraf|018********|ashraf321@gmail.com||Pending
