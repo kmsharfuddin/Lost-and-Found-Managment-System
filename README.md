@@ -152,6 +152,30 @@ Now, open your web browser and navigate to the application:
 ---
 
 
+# Lost and Found Management System
 
+This is a professional web application developed with PHP and MySQL to manage lost and found items.
+
+## System Screenshots
+
+Here are the visual representations of the system:
+
+### 1. Dashboard / Main View
+![Screenshot 1](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.39%20AM%20(1).jpeg)
+
+### 2. Item Registration / Report
+![Screenshot 2](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.39%20AM.jpeg)
+
+### 3. Approval System
+![Screenshot 3](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.40%20AM.jpeg)
+
+### 4. Admin Management
+![Screenshot 4](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.41%20AM%20(1).jpeg)
+
+### 5. Report Statistics
+![Screenshot 5](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.41%20AM.jpeg)
+
+### 6. User Account Management
+![Screenshot 6](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.42%20AM.jpeg)
 
 
