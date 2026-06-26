@@ -157,7 +157,7 @@ A dynamic, secure, and user-friendly web application developed with **PHP**, **M
 
 ---
 
-## 📸 System Walkthrough & Screenshots
+##  System Screenshots
 
 Here is the exact step-by-step visual workflow of the system, showcasing the user-end journey, reporting lifecycle, and centralized administrative backend panel.
 
