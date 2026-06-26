@@ -1,6 +1,6 @@
 # 🔍 Lost and Found Management System
 
-> 🎓 ACADEMIC PROJECT - EDUCATIONAL USE ONLY
+> 🎓 ACADEMIC PROJECT 
 >
 > Copyright © 2026 K.M Sharfuddin. All Rights Reserved.
 
@@ -161,39 +161,22 @@ A dynamic, secure, and user-friendly web application developed with **PHP**, **M
 
 Here is the exact step-by-step visual workflow of the system, showcasing the user-end journey, reporting lifecycle, and centralized administrative backend panel.
 
-### 🔐 Part 1: User Portal & Authentication
+###  Part 1: User Portal & Authentication
 
 #### 1. User Authentication (Login & Registration)
 The main secure entry gateway for standard users. It handles authentication sessions and allows new users to register securely into the database.
 ![User Authentication](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.39%20AM.jpeg)
 
-#### 2. User Workspace / Dashboard
-Once authenticated, users land on this optimized workspace. It highlights primary navigation pathways, platform summary tiles, and quick shortcuts for tracking.
-![User Dashboard](Screenshots/WhatsApp%20Image%202026-05-19%20at%202.39.14%20AM.jpeg)
-
-#### 3. Item Logging & Registration (Upper Interface)
-An intuitive, structured multi-field form designed for lodging explicit item parameters, including transaction types (Lost/Found), categories, and precise timestamps.
-![Report Form Top](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.40%20AM.jpeg)
-
-#### 4. Contact Registry & Media Upload (Lower Interface)
-The final segment of the submission module, allowing users to upload binary image assets of the item and attach verified contact data before pushing it live.
-![Report Form Bottom](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.41%20AM.jpeg)
-
-#### 5. Public Reports Feed (Global Listings)
-A unified dynamic feed rendering all unresolved items across the platform. This module allows open browsing for users searching for matches with clear thumbnail previews.
+**2. Lost & Found Report Form:**
+A user-friendly form where users can report lost or found items with item details, location, date & time, image upload, and contact information.
+![User Control Panel](Screenshots/WhatsApp%20Image%202026-05-19%20at%202.39.30%20AM.jpeg)
+--
 ![All Active Reports](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.41%20AM%20(1).jpeg)
 
-#### 6. Categorized Grid Search Array
-An optimized search grid displaying filtered relational datasets based on individual category selection tags without breaking layout uniformity.
-![Filtered View](Screenshots/WhatsApp%20Image%202026-05-19%20at%202.39.15%20AM%20(1).jpeg)
-
-#### 7. Verification & Owner Match Portal
-The explicit single-item display layer where claimants can view high-resolution specifications, crosscheck tags, and initiate direct recovery claims.
-![Claim Management](Screenshots/WhatsApp%20Image%202026-05-19%20at%202.39.15%20AM%20(3).jpeg)
 
 ---
 
-### 👑 Part 2: Administrative Backend Control
+###  Part 2: Administrative Backend Control
 
 #### 8. Secured Admin Gateway
 An independent and heavily protected authentication gateway completely isolated from public routing, reserved exclusively for system operators.
@@ -203,17 +186,12 @@ An independent and heavily protected authentication gateway completely isolated 
 The main system control room for admins, featuring automated counter widgets that display concurrent session counts, database volume, and system metrics.
 ![Admin Central Control Panel](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.39%20AM%20(1).jpeg)
 
-#### 10. Admin Master Data Records Management
-An advanced administrative ledger panel used by operators to audit submissions, review user details, or drop fraudulent reports.
+**3. Smart Matching & Admin Panel:**
+
+The Admin Panel automatically compares lost and found reports using the **Smart Matching System**. It analyzes the item name, category, location, and description to calculate a matching percentage. Based on the match results, the admin can **Approve, Reject, Delete, or Proceed to Return & Contact** to help return the item to its rightful owner.
 ![Admin Reports Control](Screenshots/WhatsApp%20Image%202026-05-19%20at%202.39.15%20AM%20(4).jpeg)
 
-#### 11. User Account Monitor & Database Logs
-A back-end supervisor console for maintaining global database states, observing system infrastructure health, and configuring platform variables.
-![User Control Panel](Screenshots/WhatsApp%20Image%202026-05-19%20at%202.39.30%20AM.jpeg)
+
 
 ---
 
-## 🛠️ Core Engineering Features
-* **Role-Based Session Guard:** Secured segregation between standard Users and Admins using raw PHP session handling.
-* **Structured Relational Database Schema:** Optimized MySQL tables mapping specific data fields for item parameters, paths, and user tables.
-* **Modern Interface Layout:** Completely built on Bootstrap responsive layouts with custom layout blocks for premium UX.
