@@ -167,8 +167,9 @@ Here is the exact step-by-step visual workflow of the system, showcasing the use
 The main secure entry gateway for standard users. It handles authentication sessions and allows new users to register securely into the database.
 ![User Authentication](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.39%20AM.jpeg)
 
-#### 2. Lost & Found Report Form:
+#2. Lost & Found Report Form:
 A user-friendly form where users can report lost or found items with item details, location, date & time, image upload, and contact information.
+
 ![User Control Panel](Screenshots/WhatsApp%20Image%202026-05-19%20at%202.39.30%20AM.jpeg)
 --
 ![All Active Reports](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.41%20AM%20(1).jpeg)
