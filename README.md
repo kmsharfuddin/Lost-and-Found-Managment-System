@@ -167,7 +167,7 @@ Here is the exact step-by-step visual workflow of the system, showcasing the use
 The main secure entry gateway for standard users. It handles authentication sessions and allows new users to register securely into the database.
 ![User Authentication](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.39%20AM.jpeg)
 
-#2. Lost & Found Report Form:
+#### 2. Lost & Found Report Form:
 A user-friendly form where users can report lost or found items with item details, location, date & time, image upload, and contact information.
 
 ![User Control Panel](Screenshots/WhatsApp%20Image%202026-05-19%20at%202.39.30%20AM.jpeg)
@@ -187,7 +187,7 @@ An independent and heavily protected authentication gateway completely isolated 
 The main system control room for admins, featuring automated counter widgets that display concurrent session counts, database volume, and system metrics.
 ![Admin Central Control Panel](Screenshots/WhatsApp%20Image%202026-06-08%20at%202.11.39%20AM%20(1).jpeg)
 
-####3. Smart Matching & Admin Panel:
+#### 3. Smart Matching & Admin Panel:
 
 The Admin Panel automatically compares lost and found reports using the **Smart Matching System**. It analyzes the item name, category, location, and description to calculate a matching percentage. Based on the match results, the admin can **Approve, Reject, Delete, or Proceed to Return & Contact** to help return the item to its rightful owner.
 ![Admin Reports Control](Screenshots/WhatsApp%20Image%202026-05-19%20at%202.39.15%20AM%20(4).jpeg)
